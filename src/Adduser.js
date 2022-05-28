@@ -54,7 +54,7 @@ export function Adduser() {
       onChange={formik.handleChange} onBlur={formik.handleChange} />
       {formik.touched.about && formik.errors.about ?formik.errors.about :" "}
 
-    <Button fullwidth type="submit" >add movie</Button>
+    <Button fullwidth type="submit" >add poster</Button>
     </form>
   </div>;
 }

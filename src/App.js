@@ -29,7 +29,7 @@ function App() {
   <Box sx={{ width:900}}>
       <Button className="menu"><Link to="/">Home  </Link></Button>
      <Button className="menu"> <Link to="/Adduser">AddUser  </Link></Button>
-     <Button className="menu"><Link to="/AddPoster">Add Poster  </Link></Button>
+     <Button className="menu"><Link to="/addposter">Add Poster  </Link></Button>
      <Button className="menu"> <Link to="/User/:id">Profile </Link></Button>
                                                  </Box>
                                              </ul>
@@ -45,7 +45,7 @@ function App() {
   <Route path="/edit/:id"><Editposter /></Route>
   <Route path="/:id">< Viewposter /></Route>
         <Route path="/"><Data/></Route>
-        <Route path="/Addposter"><Addposter/></Route>
+        <Route path="/addposter"><Addposter/></Route>
         <Route path="/Login"><Login/></Route>
       </Switch>
       
