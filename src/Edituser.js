@@ -6,12 +6,12 @@ import {userValidationSchema} from './Adduser';
 import {useFormik} from "formik";
 export function Edituser() {
   const [ userlist,setuserlist]= useState(null);
-    const { id } = useParams();
+    const { _id } = useParams();
   //console.log(id, studentlist);
  // const student = studentlist[id];
  // console.log(student);
  useEffect(()=>{
-  fetch(`${APIuser}/User/${id}`,
+  fetch(`${APIuser}/User/${_id}`,
   {
     method:"GET",
   })
@@ -40,7 +40,7 @@ function Useredit({userlist}){
   });
   const history = useHistory();
   const edituser =(editst)=>{
-    fetch(`${APIuser}/User/${userlist.id}`,{
+    fetch(`${APIuser}/User/${userlist._id}`,{
 method:"PUT",
 body:JSON.stringify(editst),
 headers:{

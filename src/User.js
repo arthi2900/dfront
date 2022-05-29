@@ -6,7 +6,7 @@ import Avatar from '@mui/material/Avatar';
 import { red } from '@mui/material/colors';
 
 
-export function User({ name, logo, about, deleteuser, edituser, id }) {
+export function User({ name, logo, about, deleteuser, edituser, id ,_id}) {
   const history = useHistory();
   return (
     <div>

@@ -18,8 +18,8 @@ export function Userdata() {
   }
   useEffect(()=>getuser(),[]);
 //const teacherdelete =(id)=>console.log("deleting ",id);
-const userdelete =(id)=>{
-  fetch(`${APIuser}/User/${id}`,{method:"DELETE"})
+const userdelete =(_id)=>{
+  fetch(`${APIuser}/User/${_id}`,{method:"DELETE"})
   .then(()=>getuser());
   //.then(data=>console.log(data))
   }
@@ -28,14 +28,14 @@ const userdelete =(id)=>{
     <div className="App">
       <div className="teacher-list">
         {userlist.map(({name,logo,about,id}, index) => (
-          <User key={index}
+          <User key={id}
             name={name}
             logo={logo}
             about={about}
             deleteuser={<IconButton aria-label="add to favorites" color="error"
-              onClick={() => userdelete(id)}><DeleteIcon /></IconButton>}
+              onClick={() => userdelete(_id)}><DeleteIcon /></IconButton>}
             edituser={<IconButton aria-label="add to favorites" color="primary"
-              onClick={() => history.push(`/User/edit/${id}`)}>  <EditIcon />
+              onClick={() => history.push(`/User/edit/${_id}`)}>  <EditIcon />
             </IconButton>}
             id={id} />))}
 
